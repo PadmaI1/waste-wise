@@ -1,0 +1,8 @@
+{
+  "name": "wastewise",
+  "version": "1.0.0",
+  "description": "An AI-powered waste classification application that turns images into actionable recycling insights. Using deep learning and computer vision, it identifies seven types of waste and encourages responsible disposal, recycling and creative reuse.",
+  "author": "Padma Iyer <padmaiyer01@protonmail.com>",
+  "license": "UNLICENSED",
+  "private": true
+}

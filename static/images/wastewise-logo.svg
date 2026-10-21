@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="WasteWise logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d1fae5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="124" fill="url(#bg)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"><path d="M114.5 51.2A78 78 0 0 1 204.3 111.8"/><path d="M201.3 154.7A78 78 0 0 1 103.9 202.2"/><path d="M68.2 178.1A78 78 0 0 1 75.8 70.0"/></g>
+  <g fill="#ffffff"><path d="M219.9 108.5L206.0 130.7L188.6 115.1Z"/><path d="M99.0 217.4L86.7 194.1L108.8 187.0Z"/><path d="M65.1 58.1L91.4 59.1L86.5 81.9Z"/></g>
+  <path d="M128 66C94 90 88 130 128 168C168 130 162 90 128 66Z" fill="url(#leaf)"/>
+  <path d="M128 90V190" stroke="#047857" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M128 130L108 112M128 148L150 126" stroke="#047857" stroke-width="5" stroke-linecap="round" fill="none"/>
+</svg>

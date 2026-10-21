@@ -1,110 +1,91 @@
-# TrashTech - Waste Classifier Project 🌍♻️
+<p align="center">
+  <img src="static/images/wastewise-logo.svg" alt="WasteWise logo" width="160">
+</p>
 
-## Introduction 📝
-TrashTech is a Flask-based project that aims to classify different categories of waste using deep learning techniques. The project has been trained on a dataset containing more than 5000 images of waste items. It not only classifies the waste into seven different categories but also provides sections to craft waste items and promote their reuse. The ultimate goal of TrashTech is to motivate people to recycle waste and raise awareness about the importance of recycling for the well-being of our planet. 🌱🌎
+<h1 align="center">WasteWise</h1>
 
-![home](static/images/1.png)
+<p align="center">
+  An AI-powered waste classification application that turns images into actionable recycling insights.
+</p>
 
-## Waste Classification ♻️🗑️
-TrashTech utilizes deep learning algorithms to accurately classify waste items into the following seven categories:
-1. Plastic 🥤
-2. Glass 🍶
-3. Metal 🧱
-4. Paper 📄
-5. Cardboard 📦
-6. Organic 🥕
-7. Miscellaneous 📦❔
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.7%2B-3776AB?logo=python&logoColor=white">
+  <img alt="Flask" src="https://img.shields.io/badge/Flask-2.2.2-000000?logo=flask&logoColor=white">
+  <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-Keras-FF6F00?logo=tensorflow&logoColor=white">
+</p>
 
-The trained model is capable of analyzing images of waste items and predicting their corresponding category with high accuracy.
+## About
 
-![home](static/images/2.png)
+WasteWise uses deep learning and computer vision to identify seven types of waste from a photo and encourages responsible disposal, recycling and creative reuse. It is built with Flask and a VGG16-based Keras model trained on more than 5,000 images of waste items.
 
-## Craft and Reuse ♻️🎨
-TrashTech goes beyond waste classification by providing sections that offer creative ideas and instructions for crafting waste items into useful and aesthetically pleasing objects. These ideas encourage users to reuse waste materials and reduce their environmental impact. By transforming waste into valuable items, TrashTech aims to inspire users to think innovatively and contribute to a more sustainable future. ♻️🔨🖌️
-![home](static/images/3.png)
+![Home](static/images/1.png)
 
-## Motivation for Recycling Waste 🌍💪
-Recycling waste plays a crucial role in preserving our planet's resources and protecting the environment. TrashTech emphasizes the significance of recycling by highlighting the potential consequences if we neglect this responsibility. Earth would suffer from the following consequences without proper waste recycling:
-- Depletion of natural resources 🌳🏭
-- Increased pollution and landfills 🏞️🗑️
-- Destruction of ecosystems and wildlife habitats 🐦🐢🐝
-- Climate change and global warming 🌡️🌍
+## Features
 
-By raising awareness about these issues, TrashTech encourages individuals to adopt sustainable practices and actively participate in recycling efforts.
+- **Image-based classification:** upload a photo and get the predicted waste category.
+- **Seven waste categories:** plastic, glass, metal, paper, cardboard, organic and miscellaneous.
+- **Craft and reuse ideas:** creative upcycling suggestions that give waste a second life.
+- **Recycling awareness:** explains what happens to resources, ecosystems and the climate when waste is not recycled.
+- **Responsive web interface:** a home page, a classification page and a footer with contact details.
 
-![home](static/images/4.png)
+![Classification](static/images/2.png)
 
-## Feedback and Contact 💬📧
-TrashTech values user feedback and encourages users to report any bugs or suggest improvements to enhance the project's functionality. If you encounter any issues or have ideas for improvement, please feel free to reach out through the provided contact information.
+## How it works
 
-### Reporting Bugs 🐞📮
-If you come across any bugs or technical issues while using TrashTech, please submit a detailed bug report via email at kartikeymishra626@gmail.com or open an issue on our GitHub repository.
+1. The user uploads an image on the classification page.
+2. Flask saves it to `uploads/` and resizes it to 224×224.
+3. The VGG16-based model (`vgg16-0014.hdf5`) predicts the waste category.
+4. The result is shown in the browser alongside reuse and recycling guidance.
 
-### Suggesting Changes 📝📮
-We welcome your suggestions for any changes or new features you would like to see in TrashTech. Please reach out to us by email at kartikeymishra626@gmail.com or submit your suggestions on our GitHub repository.
+The model was trained in [`Garbage_and_waste_material_Classification.ipynb`](Garbage_and_waste_material_Classification.ipynb).
 
-> Also you guys can fill <a href="https://forms.gle/qA6EBHfqH5ksYWFt9">this form</a> for a detailed submission regarding this. Your input is valuable to us and will help us improve TrashTalk further. Thank you for your contribution! 🙏🌱
+![Reuse](static/images/3.png)
 
-## Requirements 📦🔧
-To run the TrashTech project, you need to have the following dependencies installed:
+## Tech stack
 
-- Python 3.7+
-- Flask 2.0.1
-- TensorFlow 2.6.0
-- Keras 2.6.0
-- NumPy 1.21.2
-- Pillow 8.4.0
-- Gevent 22.10.2
-- Werkzeug 2.2.2
+| Area | Tools |
+| --- | --- |
+| Backend | Python, Flask, Werkzeug, Gevent, Gunicorn |
+| Machine learning | TensorFlow, Keras (VGG16), NumPy, Pillow |
+| Frontend | HTML, CSS, JavaScript, Bootstrap |
 
-You can install these dependencies by running the following command:
+## Getting started
 
 ```bash
+git clone <repository-url>
+cd WasteWise
 pip install -r requirements.txt
-```
-
-## Setup ⚙️🛠️
-To set up the TrashTech project, follow these steps:
-
-1. Clone the repository from GitHub:
-
-  ```bash
- git clone https://github.com/TrashTech/TrashTech.git
- ```
- 2. Navigate to the project directory:
-
-```bash
-cd TrashTech
-```
-3. Install the required dependencies using pip:
-```bash
-pip install -r requirements.txt
-```
-4. Run the Flask application:
-```bash
 python app.py
 ```
-5. Open your web browser and visit http://localhost:5000 to access the TrashTech application.
 
-## Demo 📸🎥
+Then open <http://localhost:5000> in your browser.
 
-To demonstrate the TrashTech project, follow these steps:
+## Usage
 
-1. Access the TrashTech web application by running the Flask application:
+1. Open the app and go to the classification section.
+2. Upload an image of a waste item.
+3. Read the predicted category.
+4. Browse the craft and reuse sections for ideas.
 
-```bash
-python app.py
+![Recycling](static/images/4.png)
+
+## Project structure
+
 ```
-2. Open your web browser and visit http://localhost:5000 to access the TrashTech application.
+WasteWise/
+├── app.py                # Flask app and prediction endpoint
+├── vgg16-0014.hdf5       # Trained model
+├── requirements.txt
+├── templates/            # HTML templates
+├── static/               # CSS, JS and images
+├── uploads/              # Uploaded images
+└── Garbage_and_waste_material_Classification.ipynb
+```
 
-3. Upload an image of a waste item to the application.
+## Contributing
 
-4. The waste classification model will predict the category of the waste item.
+Bug reports and suggestions are welcome. Open an issue or email [padmaiyer01@protonmail.com](mailto:padmaiyer01@protonmail.com).
 
-5. Explore the crafting and reuse sections to discover creative ideas for reusing waste items.
+## Author
 
-6. Get motivated to recycle waste and contribute to a more sustainable future!
-
-## Conclusion 🌍🙌
-
-TrashTech is not just a waste classifier but a project that aims to inspire individuals to take action and make a positive impact on the environment. By correctly classifying waste items, promoting reuse, and motivating recycling, TrashTech aims to contribute to a cleaner, greener, and more sustainable future. Together, let's work towards a world where waste is seen as a valuable resource and recycling becomes a way of life. ♻️🌎🌱
+**Padma Iyer** — [padmaiyer01@protonmail.com](mailto:padmaiyer01@protonmail.com)
